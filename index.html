@@ -4,57 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iglesia Bíblica Bautista Pueblo de Israel | Soyapango, San Salvador</title>
-    <meta name="description" content="Sitio oficial de la Iglesia Bíblica Bautista Pueblo de Israel en Soyapango, San Salvador. Más de 25 años proclamando el Evangelio.">
+    <meta name="description" content="Sitio oficial de la Iglesia Bíblica Bautista Pueblo de Israel en Soyapango, San Salvador. Más de 25 años proclamando el Evangelio con fidelidad.">
 
-    <!-- Design Tokens & CSS Base (V7.1 - Neutral Slate Update) -->
+    <!-- Design Tokens & CSS Base (V7.2 - Restored Image Scale & Performance) -->
     <style>
         :root {
-            --primary: #0f2a4a; /* Azul Institucional */
-            --secondary: #c05621; /* Acento Naranja */
-            --accent-light: #e0f2fe;
+            /* Colores Institucionales */
+            --primary: #0f2a4a;
+            --secondary: #c05621;
             --text-dark: #111827;
             --text-muted: #4b5563;
             --text-light: #ffffff;
             --white: #ffffff;
-            /* CAMBIO: Fondo neutro para evitar saturación celeste */
             --bg-main: #f9fafb;
             --bg-section: #f3f4f6;
             --radius: 12px;
-            --shadow: 0 10px 15px -3px rgba(15, 42, 74, 0.05), 0 4px 6px -2px rgba(15, 42, 74, 0.03);
+            --shadow: 0 10px 15px -3px rgba(15, 42, 74, 0.05);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background-color: var(--bg-main); /* Fondo Neutro Slate 50 */
+            background-color: var(--bg-main);
             overflow-x: hidden;
         }
 
-        /* Layout */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Tipografía */
-        h1, h2, h3 {
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        h1, h2, h3 { color: var(--primary); letter-spacing: -0.025em; }
 
         /* Navegación */
         nav {
@@ -65,104 +45,52 @@
             z-index: 1000;
             box-shadow: var(--shadow);
         }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav ul { display: flex; list-style: none; gap: 1.5rem; }
+        nav a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; font-weight: 500; opacity: 0.8; transition: var(--transition); }
+        nav a:hover { opacity: 1; color: var(--white); }
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: var(--text-light);
-            font-weight: 800;
-            font-size: 1.1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: var(--transition);
-            opacity: 0.8;
-        }
-
-        nav a:hover {
-            color: var(--white);
-            opacity: 1;
-        }
-
-        /* Hero Section */
+        /* Hero */
         .hero {
-            position: relative;
-            height: 70vh;
-            min-height: 500px;
+            height: 65vh;
+            min-height: 550px;
             display: flex;
             align-items: center;
+            text-align: center;
             color: var(--text-light);
             background: linear-gradient(rgba(15, 42, 74, 0.8), rgba(15, 42, 74, 0.8)),
             url('assets/entrada_iglesia.jpg') no-repeat center center/cover;
-            text-align: center;
         }
 
-        .hero h1 {
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: white; margin-bottom: 1.5rem; font-weight: 800; }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.95;
-        }
-
-        /* Botones */
         .btn {
             display: inline-block;
             background: var(--secondary);
             color: var(--text-light);
-            padding: 1rem 2rem;
+            padding: 1.1rem 2.2rem;
             border-radius: var(--radius);
             text-decoration: none;
             font-weight: 700;
             transition: var(--transition);
-            box-shadow: 0 4px 14px 0 rgba(192, 86, 33, 0.3);
+            box-shadow: 0 4px 14px rgba(192, 86, 33, 0.3);
         }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #9c4221;
-            box-shadow: 0 6px 20px rgba(192, 86, 33, 0.4);
-        }
+        .btn:hover { transform: translateY(-3px); background: #9c4221; box-shadow: 0 6px 20px rgba(192, 86, 33, 0.4); }
 
         /* Secciones */
-        section {
-            padding: 7rem 0;
+        section { padding: 8rem 0; }
+
+        /* Estilos de Imagen Restaurados (Escala Natural) */
+        .img-block {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: block;
+            height: auto; /* Permite que la imagen crezca verticalmente según su ancho */
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        /* Cuadrículas */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
+        .flex-row { display: flex; align-items: center; gap: 5rem; flex-wrap: wrap; }
+        .flex-item { flex: 1; min-width: 350px; }
 
         /* Tarjetas */
         .card {
@@ -170,105 +98,37 @@
             padding: 2.5rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            transition: var(--transition);
             border-top: 5px solid var(--primary);
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Visión 2026 */
-        .vision-container {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .vision-image {
-            flex: 1;
-            min-width: 320px;
-        }
-
-        .vision-image img {
-            width: 100%;
+        /* Horarios */
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .schedule-card {
+            background: var(--white);
+            padding: 1.8rem;
             border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
             box-shadow: var(--shadow);
         }
+        .day-title { font-weight: 800; color: var(--secondary); text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 0.5rem; }
+        .activity { font-weight: 700; display: block; color: var(--primary); font-size: 1.1rem; }
+        .time { color: var(--text-muted); font-weight: 500; }
 
-        .vision-content {
-            flex: 1;
-            min-width: 320px;
-        }
-
-        /* Media Box */
+        /* Media / YouTube */
         .media-box {
-            background: var(--primary);
+            background: linear-gradient(135deg, #cd201f 0%, #a01a1a 100%);
             color: var(--text-light);
-            padding: 5rem 3rem;
+            padding: 5rem 2rem;
             border-radius: var(--radius);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 2rem;
-        }
-
-        .media-box h2 { color: var(--text-light); }
-
-        /* Historia Section */
-        .history-section {
-            background-color: var(--bg-section); /* Gris suave para romper el fondo principal */
-        }
-
-        .history-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .history-img img {
-            width: 100%;
-            height: 100%;
-            max-height: 550px;
-            object-fit: cover;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        /* Footer */
-        footer {
-            background: #030712;
-            color: var(--text-light);
-            padding: 5rem 0 2.5rem;
             text-align: center;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-        }
+        footer { background: #030712; color: var(--text-light); padding: 5rem 0 3rem; text-align: center; }
 
-        .footer-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            opacity: 0.6;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover { opacity: 1; color: var(--secondary); }
-
-        /* Responsive */
         @media (max-width: 992px) {
-            .history-grid { grid-template-columns: 1fr; }
-            .hero { padding: 8rem 0 5rem; }
-            nav .container { flex-direction: column; gap: 1rem; }
-            nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .flex-row { flex-direction: column; text-align: center; }
+            .flex-item { min-width: 100%; }
+            section { padding: 4rem 0; }
         }
     </style>
 </head>
@@ -276,10 +136,10 @@
 
 <nav aria-label="Navegación Principal">
     <div class="container">
-        <a href="#inicio" class="logo">IBB Pueblo de Israel</a>
+        <a href="#inicio" style="color:white; font-weight:800; text-decoration:none; font-size: 1.1rem; letter-spacing: 1px;">IBB PUEBLO DE ISRAEL</a>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#vision">Visión 2026</a></li>
+            <li><a href="#vision">Visión</a></li>
             <li><a href="#historia">Nosotros</a></li>
             <li><a href="#horarios">Cultos</a></li>
             <li><a href="#contacto">Contacto</a></li>
@@ -288,11 +148,11 @@
 </nav>
 
 <main>
-    <!-- Hero: Portada Principal -->
+    <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container">
-            <h1>Fieles a la Palabra de Dios</h1>
-            <p>Bienvenido a la Iglesia Bíblica Bautista "Pueblo de Israel". Una comunidad fundamentada en las Escrituras en Soyapango, San Salvador.</p>
+            <h1>Cimentados en la Palabra de Dios</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.9;">Soyapango, San Salvador. Proclamando la Verdad con fidelidad por más de 25 años.</p>
             <a href="#horarios" class="btn">Horarios de Reunión</a>
         </div>
     </section>
@@ -300,105 +160,100 @@
     <!-- Visión 2026 -->
     <section id="vision">
         <div class="container">
-            <div class="vision-container">
-                <div class="vision-content">
-                    <h2 style="font-size: 2.5rem; color: var(--primary);">2026: El Año del Cambio</h2>
-                    <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem;">
-                        En la IBB Pueblo de Israel, nuestra meta es la transformación integral a través de Jesucristo. Este año trabajamos por una renovación espiritual que impacte a cada hogar de Soyapango, San Salvador.
+            <div class="flex-row">
+                <div class="flex-item">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">2026: El Año del Cambio</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.2rem;">
+                        En la IBB Pueblo de Israel, nos enfocamos en la transformación integral de la familia a través de Jesucristo. Trabajamos por una renovación espiritual profunda en todo Soyapango.
                     </p>
-                    <div class="card" style="border-left: 5px solid var(--secondary); background: #fff;">
-                        <p style="font-style: italic; color: var(--text-muted);">"De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas."</p>
-                        <p style="text-align: right; margin-top: 1.5rem; font-weight: 800; color: var(--primary);">— 2 Corintios 5:17</p>
+                    <div class="card" style="border-left-color: var(--secondary);">
+                        <p style="font-style: italic; font-size: 1.1rem; color: var(--text-muted);">"De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas."</p>
+                        <p style="text-align: right; font-weight: 800; margin-top: 1.5rem; color: var(--primary);">— 2 Corintios 5:17</p>
                     </div>
                 </div>
-                <div class="vision-image">
-                    <img src="assets/2026.jpg" alt="Visión 2026 - El Año del Cambio">
+                <div class="flex-item">
+                    <img src="assets/2026.jpg" alt="Visión 2026 - El Año del Cambio" class="img-block">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Historia y Santuario -->
+    <!-- Historia / Santuario -->
     <section id="historia" class="history-section">
         <div class="container">
-            <div class="history-grid">
-                <div class="history-img">
-                    <img src="assets/interno.jpg" alt="Santuario IBB Pueblo de Israel">
-                </div>
-                <div>
-                    <h2 style="font-size: 2.25rem;">Nuestra Historia</h2>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Establecidos en el corazón de Soyapango, San Salvador, desde el año 2000. Durante más de 25 años, hemos sido un faro de la sana doctrina bautista.</p>
-                    <p style="margin-bottom: 2.5rem; color: var(--text-muted);">Nuestra identidad se define por la exposición fiel de la Biblia y el amor fraternal entre los redimidos por Cristo.</p>
-
-                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="flex-row" style="flex-direction: row-reverse;">
+                <div class="flex-item">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Nuestra Historia</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">Desde nuestra fundación en el año 2000, hemos permanecido firmes en Soyapango, San Salvador, como un faro de sana doctrina y amor fraternal.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                         <div class="card" style="padding: 1.5rem; border-top-width: 3px;">
-                            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Misión</h3>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Glorificar a Dios mediante el discipulado bíblico.</p>
+                            <h3 style="font-size: 1.1rem;">Misión</h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Glorificar a Dios mediante la exposición fiel de Su Palabra.</p>
                         </div>
-                        <div class="card" style="padding: 1.5rem; border-top-width: 3px; border-color: var(--secondary);">
-                            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Visión</h3>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Impactar Soyapango con el amor de Jesucristo.</p>
+                        <div class="card" style="padding: 1.5rem; border-top-width: 3px; border-top-color: var(--secondary);">
+                            <h3 style="font-size: 1.1rem;">Visión</h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Impactar generaciones en San Salvador con el Evangelio.</p>
                         </div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <img src="assets/interno.jpg" alt="Interior del Santuario IBB Pueblo de Israel" class="img-block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube -->
+    <section id="medios" class="container">
+        <div class="media-box">
+            <h2 style="color: white; font-size: 2.8rem; margin-bottom: 1rem;">Nuestro Canal de YouTube</h2>
+            <p style="margin-bottom: 2.5rem; opacity: 0.9; font-size: 1.2rem;">Accede a nuestros sermones, cultos en vivo y enseñanzas bíblicas desde cualquier lugar.</p>
+            <a href="http://www.youtube.com/@iglesiapueblodeisraelsoyap9189" target="_blank" class="btn" style="background: white; color: #cd201f;">Ir al Contenido Oficial</a>
+        </div>
+    </section>
+
+    <!-- Horarios Semanales -->
+    <section id="horarios">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 4.5rem; font-size: 2.5rem;">Horarios de Actividades</h2>
+            <div class="schedule-grid">
+                <div class="schedule-card"><span class="day-title">Lunes</span><span class="activity">AYUNO Y ORACIÓN</span><span class="time">08:00 AM - 12:00 PM</span></div>
+                <div class="schedule-card"><span class="day-title">Martes</span><span class="activity">CULTO DE ORACIÓN</span><span class="time">06:00 PM - 07:30 PM</span></div>
+                <div class="schedule-card"><span class="day-title">Miércoles</span><span class="activity">ESTUDIO BÍBLICO</span><span class="time">06:00 PM - 07:30 PM</span></div>
+                <div class="schedule-card"><span class="day-title">Jueves</span><span class="activity">AMANECIENDO CON JESÚS</span><span class="time">05:45 AM - 06:55 AM</span></div>
+                <div class="schedule-card"><span class="day-title">Viernes</span><span class="activity">CULTO DE MILAGROS</span><span class="time">06:00 PM - 08:00 PM</span></div>
+                <div class="schedule-card"><span class="day-title">Sábado</span><span class="activity">UNA HORA CON JESÚS</span><span class="time">04:00 PM - 05:00 PM</span></div>
+                <!-- Domingo con Estilo Especial -->
+                <div class="schedule-card" style="border-left-color: var(--secondary);">
+                    <span class="day-title" style="color: var(--secondary);">Domingos</span>
+                    <div style="margin-top: 0.8rem;">
+                        <p style="font-weight: 800; color: var(--primary);">DEVOCIONALES:</p>
+                        <p class="time">06:00 AM - 07:30 AM</p>
+                        <p class="time">08:00 AM - 09:30 AM</p>
+                        <p class="time">10:00 AM - 12:00 PM</p>
+                        <p style="font-weight: 800; color: var(--primary); margin-top: 1rem;">ADORACIÓN:</p>
+                        <p class="time">04:00 PM - 05:30 PM</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Radio y Medios -->
-    <section id="medios">
-        <div class="container">
-            <div class="media-box">
-                <h2 style="font-size: 2.5rem;">Radio Pueblo de Israel</h2>
-                <p style="max-width: 750px; font-size: 1.15rem; opacity: 0.9;">
-                    Sintoniza nuestra radio online las 24 horas del día. Música que edifica y predicación expositiva para alimentar tu fe desde cualquier lugar del mundo.
-                </p>
-                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
-                    <a href="#" class="btn" style="background: var(--white); color: var(--primary);">Escuchar en Directo</a>
-                    <a href="#" class="btn" style="background: transparent; border: 2px solid var(--white); box-shadow: none;">Facebook Live</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cultos -->
-    <section id="horarios">
-        <div class="container">
-            <div class="section-title">
-                <h2 style="font-size: 2.25rem;">Nuestras Reuniones</h2>
-                <p style="color: var(--text-muted);">Soyapango, San Salvador</p>
-            </div>
-            <div class="grid">
-                <div class="card" style="text-align: center;">
-                    <h3>Domingo</h3>
-                    <p style="color: var(--text-muted);">09:00 AM — Escuela Dominical</p>
-                    <p style="color: var(--text-muted);">10:30 AM — Culto de Adoración</p>
-                </div>
-                <div class="card" style="text-align: center; border-color: var(--secondary);">
-                    <h3 style="color: var(--secondary);">Miércoles</h3>
-                    <p style="color: var(--text-muted);">06:00 PM — Estudio y Oración</p>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <h3>Sábado</h3>
-                    <p style="color: var(--text-muted);">04:00 PM — Grupo de Jóvenes</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
+    <!-- Ubicación -->
     <section id="contacto" class="history-section">
-        <div class="container" style="max-width: 900px; text-align: center;">
-            <div class="section-title">
-                <h2 style="font-size: 2.25rem;">Ubicación y Contacto</h2>
-            </div>
+        <div class="container" style="max-width: 950px; text-align: center;">
+            <h2 style="margin-bottom: 2.5rem; font-size: 2.5rem;">Ubicación</h2>
             <div class="card" style="padding: 3.5rem;">
-                <p style="font-size: 1.4rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">📍 Soyapango, San Salvador</p>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">Final Calle 5 de Noviembre, Soyapango.</p>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">📞 <strong>Teléfono:</strong> 2255-1500</p>
-                <!-- Map Container -->
-                <div style="background: #e5e7eb; height: 350px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; border: 1px solid #d1d5db;">
-                    <p style="font-weight: 800; color: #6b7280; letter-spacing: 1px;">[ MAPA DE SOYAPANGO ]</p>
+                <p style="font-weight: 800; font-size: 1.5rem; color: var(--primary);">📍 Soyapango, San Salvador</p>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Final Calle 5 de Noviembre, Soyapango.</p>
+                <p style="margin: 1.5rem 0; font-size: 1.2rem;">📞 <strong>Teléfono:</strong> 2255-1500</p>
+
+                <!-- Integración del Iframe del Mapa -->
+                <div style="width: 100%; height: 400px; border-radius: var(--radius); overflow: hidden; border: 1px solid #d1d5db; margin-top: 2.5rem;">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d568.2854969637843!2d-89.15301007094715!3d13.699220617020872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63373e6fdbd525%3A0x18b70ba94f8b72f6!2sIglesia%20B%C3%ADblica%20Bautista%20Pueblo%20de%20Israel!5e0!3m2!1ses-419!2ssv!4v1778208000358!5m2!1ses-419!2ssv"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -407,23 +262,20 @@
 
 <footer>
     <div class="container">
-        <h2 style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 1.75rem;">IBB Pueblo de Israel</h2>
-        <div class="footer-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#vision">Visión</a>
-            <a href="#historia">Nosotros</a>
-            <a href="#horarios">Cultos</a>
-            <a href="#contacto">Contacto</a>
+        <h2 style="color: white; margin-bottom: 2rem; font-size: 1.8rem; letter-spacing: 1px;">IBB PUEBLO DE ISRAEL</h2>
+        <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+            <a href="#inicio" style="color: white; opacity: 0.7; text-decoration: none;">Inicio</a>
+            <a href="#vision" style="color: white; opacity: 0.7; text-decoration: none;">Visión</a>
+            <a href="#historia" style="color: white; opacity: 0.7; text-decoration: none;">Historia</a>
+            <a href="#horarios" style="color: white; opacity: 0.7; text-decoration: none;">Cultos</a>
         </div>
-        <p style="opacity: 0.5; font-size: 0.8rem; letter-spacing: 0.5px;">
-            © 2026 Iglesia Bíblica Bautista Pueblo de Israel, Soyapango, San Salvador.<br>
-            Ingeniería de Software bajo Estándar Enterprise V7.1.
-        </p>
+        <p style="opacity: 0.5; font-size: 0.85rem;">© 2026 Iglesia Bíblica Bautista Pueblo de Israel, Soyapango, San Salvador.</p>
+        <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem;">Desarrollado bajo Estándares Enterprise V7.1</p>
     </div>
 </footer>
 
 <script>
-    // Smooth Scroll Logic
+    // Smooth Scrolling optimizado
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -436,8 +288,6 @@
             }
         });
     });
-
-    console.log("Portal Pueblo de Israel: Status V1.2.3 - Neutral Slate Implementation");
 </script>
 </body>
 </html>
