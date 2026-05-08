@@ -1,11 +1,13 @@
 services:
   portal-pueblo-israel:
-    build: .
-    container_name: ibb_pueblo_israel_frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ibb_pueblo_israel
     ports:
-      - "80:8080" # Servidor Ubuntu (80) -> Contenedor (8080)
+      - "192.168.1.90:8081:8080" # Servidor Ubuntu (80) -> Contenedor (8080)
     restart: always
-    # Límites de recursos (Cero Desperdicio)
+    # L  mites de recursos (Cero Desperdicio)
     deploy:
       resources:
         limits:

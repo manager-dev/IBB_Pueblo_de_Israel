@@ -17,6 +17,6 @@ COPY assets/ ./assets/
 USER nginx
 
 # Exponer el puerto de escucha interno
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["nginx", "-g", "daemon off;"]
