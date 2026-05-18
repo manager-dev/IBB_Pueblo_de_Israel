@@ -110,7 +110,7 @@ IBB_Pueblo_de_Israel/
 ├── Dockerfile         # Configuración multicapa segura (Runtime Nginx Alpine No-Root)
 ├── docker-compose.yml # Declaración de servicios, puertos y límites de CPU/RAM ├── index.html         # Código fuente base del portal (Fase 1 - Vanilla HTML5)
 ├── nginx.conf         # Reglas de enrutamiento, compresión Gzip y cabeceras de seguridad
-└── README.md  # Documentación técnica e institucional del Servicio Social
+└── README.md          # Documentación técnica e institucional del Servicio Social
 
 ````
 
