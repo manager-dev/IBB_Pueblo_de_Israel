@@ -1,34 +1,121 @@
-# === IDEs y Editores de Texto ===
-# Configuraciones de JetBrains (WebStorm, etc.)
+# ====================================================================
+# ESCUDO GLOBAL: Obsidian & Gestión del Conocimiento
+# ====================================================================
+.obsidian/
+# Si usas plugins que guardan estados de pestañas locales:
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# ====================================================================
+# ENTORNOS DE DESARROLLO (Toda la Suite de JetBrains & VSCode)
+# ====================================================================
+# Bloquea directorios de configuración de PyCharm, RustRover, GoLand, WebStorm, DataGrip y Android Studio
 .idea/
 *.iml
 *.iws
+.idea_modules/
 
-# Configuraciones de VS Code
+# VS Code
 .vscode/
-*.code-workspace
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.history/
 
-# === Archivos del Sistema Operativo ===
-.DS_Store
+# ====================================================================
+# SISTEMAS OPERATIVOS (Windows & Linux)
+# ====================================================================
+# Windows
 Thumbs.db
-ehthumbs.db
 Desktop.ini
+~$*
+*.tmp
+*.bak
+*.lnk
 
-# === Docker & Logs ===
-*.log
-.docker/
-# Si en el futuro usas variables de entorno locales, no deben subirse
-.env
-.env.local
-.env.*.local
+# Linux / Unix
+*~
+.directory
+.Trash-*
+.fuse_hidden*
 
-# === Dependencias y Construcción (Para cuando evoluciones el proyecto) ===
+# ====================================================================
+# RED DE SEGURIDAD INTERMEDIA (Por si acaso)
+# ====================================================================
+# Evita que subas carpetas pesadas si creas un script rápido directo en las notas
+__pycache__/
 node_modules/
+/target/
+zig-out/
+zig-cache/
+
+# 🦀 Para tus Submódulos de Rust (kraken, hexa, charybdis)
+# Compilación y artefactos
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# ⚡ Para tus Submódulos de Zig
+
+# Directorios de compilación estándar de Zig
+zig-cache/
+zig-out/
+
+# Binarios locales
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# 🐍 Para tus Submódulos de Python
+
+# Caché de ejecución
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales (¡Crucial para que no se indexen en Obsidian!)
+.venv/
+venv/
+env/
+ENV/
+
+# Distribución / Paquetes
 dist/
 build/
-.bun/
+*.egg-info/
 
-# === Gitmodules / Submódulos ===
-# NOTA: Git gestiona los submódulos automáticamente mediante el archivo .gitmodules.
-# Aquí solo ignoramos archivos temporales o configuraciones que puedan surgir de ellos.
-.git/modules/
+# 🐹 Para tus Submódulos de Go
+
+# Binarios y Ejecutables compilados
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Dependencias locales (si usas modo vendor)
+/vendor/
+
+# 🌐 Para tus Submódulos Web (HTML, CSS/Tailwind, JS/TS, WebStorm)
+
+# Dependencias (Nunca subas esto, pesa demasiado)
+node_modules/
+/dist/
+/.next/
+/.nuxt/
+
+# Archivos de registro de errores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Caché de frameworks de CSS como Tailwind
+.tailwindcss/
+.cache/
